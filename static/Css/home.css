@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body {
+  font-family: Arial, sans-serif;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.carousel .carousel-item {
+  height: 600px;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.carousel-item img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  min-height: 600px;
+}
+
+
+/* Category Carousel */
+
+.containercarousel {
+  margin: 1% 0%;
+  max-width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.slide-heading{
+  font-family: "Martel", serif;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 50%; */
+  
+}
+#carousel {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  height: 50%;
+}
+.slides-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+#slide {
+  flex: 0 0 100%; /* Initially, show one slide at a time */
+  max-width: 33.33%; /* Set a maximum width to maintain responsiveness */
+  box-sizing: border-box;
+  padding: 0 10px; /* Add some spacing between slides */
+  text-align: center; /* Center-align text */
+  position: relative; /* Add position relative for overlay text */
+  overflow: hidden;
+}
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+}
+.slide:hover .slide-content {
+  opacity: 1; 
+}
+.slide-content h2{
+  font-weight: 600;
+}
+.slide-content h2,
+.slide-content p {
+  margin: 0;
+}
+
+#button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background:none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  width: 1;
+  z-index: 1;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+/* Latest Products */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.heading{
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
+  font-family: "Martel", serif;
+  font-style: normal;
+}
+.card:nth-child(1),
+.card:nth-child(2),
+.card:nth-child(3),
+.card:nth-child(4){
+  display: inline-block;
+}
+
+.card {
+  display: none;
+  width: 300px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  margin-top: 0;
+}
+
+.card-content p {
+  margin-bottom: 20px;
+}
+
+#load-more-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border : 2px solid #333;
+  background-color:white;
+  color: #333;
+  font-weight : 900;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#load-more-btn:hover{
+  background-color: #333;
+  color:white;
+  transition:background-color 0.3s ease-in;
+}
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+  #slide {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
+@media (max-width: 858px) {
+  .carousel .carousel-item {
+    height: 500px;
+  }
+  .carousel-item img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    min-height: 500px;
+  }
+  #slide {
+    flex: 0 0 33.33%; /* Show two slides at a time on medium-sized screens */
+    max-width: 33.33%;
+  }
+}
+
+/* CSS for small screens (e.g., mobile devices) */
+@media only screen and (max-width: 600px) {
+  .carousel .carousel-item {
+    height: 200px;
+  }
+  .slide-heading{
+    font-size: medium;
+  }
+  .link-product{
+    font-size: small;
+  }
+  .carousel-item img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    min-height: 200px;
+  }
+  #slide {
+    flex: 0 0 33.33%; /* Show two slides at a time on medium-sized screens */
+    max-width: 33.33%;
+  }
+  .slide-content h2{
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .slide-content p {
+    margin: 0;
+    font-size: 10px;
+  }
+}
