@@ -10,9 +10,6 @@ def about_page(request):
 def product_page(request):
     return render(request,'product.html')
 
-
-
-
 def contact_page(request):
     try:
         if request.method=="POST":

@@ -15,31 +15,33 @@
 </head>
 <body>
     {% include "header.html" %}
-    <div class="cat-container">
-        <h2>Categories</h2>
-        <button class="button-Cloth" role="button">Cloths</button>
-        <button class="button-Cloth" role="button">Makeup</button>
-        <button class="button-Cloth" role="button">Shoes</button>
-        <button class="button-Cloth" role="button">Skin</button>
-        <button class="button-Cloth" role="button">Hair</button>
-    </div>
-    <section>
-        <div class="heading">
-            <h2>Cloths</h2>
-        </div>
-        <div class="card-container">
-          <div class="card">
-            <a href="">
-              <img src="{% static 'img/home/img1.jpg' %}" alt="Product 1">
-            </a>
-            <div class="card-content">
-              <h2>Dress</h2>
-              <p>Rs. 1,999.00</p>
-            </div>
-          </div>
+    <div class="product-container">
+      <div class="cat-container">
+          <h1>Categories</h1>
+          <a href=""><button class="button-Cloth" role="button">Cloths</button></a>
+          <a href=""><button class="button-Cloth" role="button">Makeup</button></a>
+          <a href=""><button class="button-Cloth" role="button">Shoes</button></a>
+          <a href=""><button class="button-Cloth" role="button">Skin</button></a>
+          <a href=""><button class="button-Cloth" role="button">Hair</button></a>
       </div>
-      </section>
-      <button id="load-more-btn">Load More</button>
+      <section>
+          <div class="heading">
+              <h1>Cloths</h1>
+          </div>
+          <div class="card-container">
+            <div class="card-product">
+              <a href="">
+                <img src="{% static 'img/home/img1.jpg' %}" alt="Product 1">
+              </a>
+              <div class="card-content">
+                <h2>Dress</h2>
+                <p>Rs. 1,999.00</p>
+              </div>
+            </div>
+        </div>
+        <button id="load-more-btn">Load More</button>
+        </section>
+    </div>
       {% include "footer.html" %}
 </body>
 <script src="{% static 'Js/product.js' %}"></script>

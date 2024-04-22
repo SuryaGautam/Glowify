@@ -16,6 +16,12 @@
   outline: none;
   font-family: "Josefin Sans", sans-serif;
 }
+body{
+  background-image: linear-gradient(135deg, #f05f57 10%, #360940 100%);
+}
+.alert{
+  margin-top: 4%;
+}
 header{
   animation: fadeIn 1s ease-out forwards;
 }
@@ -25,9 +31,9 @@ header{
   /* margin: 90px auto 20px; */
   margin: 10% auto 5% auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: white;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form h2 {
