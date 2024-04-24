@@ -4,24 +4,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-ABCDEF..." crossorigin="anonymous" />
     <link rel="stylesheet" href="{% static 'Css/about.css' %}" />
     <title>Document</title>
   </head>
   <body>
     {% include "header.html" %}
-    <section class="about-sectionmain">
-        <div class="image-textmain">
-          <div class="imagemain">
+    <div class="about-container">
+    <section class="about-sectionleft">
+        <div class="image-textleft">
+          <div class="imageleft">
             <img src="{% static 'img/about/logo.png' %}" alt="About Image" />
           </div>
-          <div class="textmain">
-            <h2>About Glowify</h2>
+          <div class="textleft">
+            <h1>About Glowify</h1>
             <p>
                 Glowify is your premier destination for radiant skincare solutions and timeless fashion. Rooted in innovation and quality, our brand is dedicated to enhancing your natural beauty and confidence.
                 Explore our curated selection of skincare products and clothing, meticulously crafted to elevate your everyday glow. Experience the Glowify difference today.
@@ -33,7 +30,7 @@
     <section class="about-sectionright">
       <div class="image-textright">
         <div class="image">
-          <img src="https://via.placeholder.com/400" alt="About Image" />
+          <img src="{% static 'img/about/cleanser.jpg' %}" alt="About Image" />
         </div>
         <div class="text">
           <h1>Discover our range of facial cleansers</h1>
@@ -47,10 +44,10 @@
     <section class="about-sectionleft">
       <div class="image-textleft">
         <div class="imageleft">
-          <img src="https://via.placeholder.com/400" alt="About Image" />
+          <img src="{% static 'img/about/moisturizer.jpg' %}" alt="About Image" />
         </div>
         <div class="textleft">
-          <h2>Explore our collection of moisturizers</h2>
+          <h1>Explore our collection of moisturizers</h1>
           <p>
             Indulge in luxurious hydration with Glowify's collection of moisturizers. Immerse yourself in a world of rejuvenation as our premium formulas nourish and replenish your skin, leaving it supple, radiant, and irresistibly soft.
           </p>
@@ -63,8 +60,8 @@
 
     <section class="about-sectionright">
         <div class="image-textright">
-          <div class="image">
-            <img src="https://via.placeholder.com/400" alt="About Image" />
+          <div class="imageleft">
+            <img src="{% static 'img/about/cloth.jpg' %}" alt="About Image" />
           </div>
           <div class="text">
             <h1>Discover the Features of Our Clothing Line</h1>
@@ -77,11 +74,8 @@
           </div>
         </div>
       </section>
+    </div>
     {% include "footer.html" %}
   </body>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"
-  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>

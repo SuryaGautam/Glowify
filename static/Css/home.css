@@ -17,10 +17,11 @@ body {
   font-family: Arial, sans-serif;
   animation: fadeIn 1s ease-out forwards;
 }
-
+.slide-container{
+  width: 100%;
+}
 .carousel .carousel-item {
   height: 600px;
-  animation: fadeIn 1s ease-out forwards;
 }
 
 .carousel-item img {
@@ -33,7 +34,6 @@ body {
 
 
 /* Category Carousel */
-
 .containercarousel {
   margin: 1% 0%;
   max-width: 100%;
@@ -46,16 +46,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-left: 50%; */
   
 }
 #carousel {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   height: 50%;
 }
 .slides-container {
@@ -64,12 +61,12 @@ body {
 }
 
 #slide {
-  flex: 0 0 100%; /* Initially, show one slide at a time */
-  max-width: 33.33%; /* Set a maximum width to maintain responsiveness */
+  flex: 0 0 100%; 
+  max-width: 33.33%;
   box-sizing: border-box;
-  padding: 0 10px; /* Add some spacing between slides */
-  text-align: center; /* Center-align text */
-  position: relative; /* Add position relative for overlay text */
+  padding: 0 10px; 
+  text-align: center;
+  position: relative; 
   overflow: hidden;
 }
 .slide img {
@@ -135,7 +132,8 @@ body {
 }
 .card-product:nth-child(1),
 .card-product:nth-child(2),
-.card-product:nth-child(3){
+.card-product:nth-child(3),
+.card-product:nth-child(4){
   display:inline-block;
 }
 
@@ -172,7 +170,7 @@ body {
 #load-more-btn {
   display: block;
   margin: 0 auto;
-  margin-bottom: 1%;
+  margin-bottom: 2%;
   padding: 10px 20px;
   border : 2px solid #333;
   background-color:white;
@@ -186,68 +184,20 @@ body {
   color:white;
   transition:background-color 0.3s ease-in;
 }
-@media (max-width: 952px) {
-  label.logo {
-    font-size: 30px;
-    padding-left: 50px;
-  }
-  nav ul li a {
-    font-size: 16px;
-  }
-  #slide {
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
-  }
-}
-@media (max-width: 858px) {
-  .carousel .carousel-item {
-    height: 500px;
-  }
-  .carousel-item img {
-    position: absolute;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    min-height: 500px;
-  }
-  #slide {
-    flex: 0 0 33.33%; /* Show two slides at a time on medium-sized screens */
-    max-width: 33.33%;
-  }
-}
 
 /* CSS for small screens (e.g., mobile devices) */
 @media only screen and (max-width: 600px) {
-  .carousel .carousel-item {
-    height: 200px;
+  .slide-content p{
+    display: none;
   }
-  .slide-heading{
-    font-size: medium;
-  }
-  .link-product{
-    font-size: small;
-  }
-  .carousel-item img {
-    position: absolute;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    min-height: 200px;
-  }
-  .carousel-control-prev {
-    height: 40%;
-    margin-top: 20%;
-  }
-  #slide {
-    flex: 0 0 33.33%; /* Show two slides at a time on medium-sized screens */
-    max-width: 33.33%;
+  .slide-content{
+    font-size: smaller;
+    opacity: 1;
   }
   .slide-content h2{
-    font-size: 15px;
-    font-weight: 600;
+    font-weight: 1;
   }
-  .slide-content p {
-    margin: 0;
-    font-size: 10px;
-  }
+  #load-more-btn {
+    margin-bottom: 5%;
+}
 }

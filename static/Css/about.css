@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -8,62 +9,25 @@
     transform: translateY(0);
   }
 }
-
-.about-sectionmain {
-  animation: fadeIn 1s ease-out forwards;
+*{
+  font-family: "Josefin Sans", sans-serif;
+}
+body{
   background-image: linear-gradient(135deg, #f05f57 10%, #360940 100%);
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  padding: 50px 20px;
-  text-align: center;
-  margin-top: 5%;
 }
-
-.image-textmain {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row-reverse;
+.about-container{
+  animation: fadeIn 1s ease-out forwards;
+  margin: 10% 5%;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-.imagemain {
-  flex: 1;
-  margin-left: 20px;
-}
-
-.image {
-  flex: 1;
-  margin-right: 20px;
-}
-
-.image img {
-  max-width: 100%;
-  height: auto;
-}
-
-.textmain {
-  flex: 1;
-  text-align: left;
-}
-
-.textmain h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.textmain p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
 .about-sectionright {
   animation: fadeIn 1s ease-out forwards;
-  background-image: linear-gradient(135deg, #f05f57 10%, #360940 100%);
   background-size: cover;
   background-position: center;
-  color: #fff;
-  padding: 100px 20px;
+  padding: 5%;
   text-align: center;
 }
 
@@ -79,8 +43,9 @@
 }
 
 .image img {
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .text {
@@ -91,6 +56,7 @@
 .text h1 {
   font-size: 36px;
   margin-bottom: 20px;
+  font-weight: 900;
 }
 
 .text p {
@@ -101,11 +67,9 @@
 /* left section */
 .about-sectionleft {
   animation: fadeIn 1s ease-out forwards;
-  background-image: linear-gradient(135deg, #f05f57 10%, #360940 100%);
   background-size: cover;
   background-position: center;
-  color: #fff;
-  padding: 50px 20px;
+  padding: 5% ;
   text-align: center;
 }
 
@@ -118,17 +82,13 @@
 
 .imageleft {
   flex: 1;
-  margin-left: 20px;
-}
-
-.image {
-  flex: 1;
   margin-right: 20px;
 }
 
-.image img {
-  max-width: 100%;
+.imageleft img {
+  max-width: 70%;
   height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .textleft {
@@ -139,9 +99,22 @@
 .textleft h1 {
   font-size: 36px;
   margin-bottom: 20px;
+  font-weight: 900;
 }
 
 .textleft p {
   font-size: 18px;
   line-height: 1.6;
+}
+/* CSS for small screens (e.g., mobile devices) */
+@media (max-width: 858px) {
+  .about-container {
+    margin: 20% 5%;
+}
+}
+
+@media only screen and (max-width: 600px) {
+  .about-container {
+    margin: 35% 5%;
+}
 }

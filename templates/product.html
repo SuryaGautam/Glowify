@@ -10,6 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-ABCDEF..." crossorigin="anonymous" />
     <link rel="stylesheet" href="{% static 'Css/product.css' %}">
     <title>Document</title>
 </head>
@@ -18,28 +19,98 @@
     <div class="product-container">
       <div class="cat-container">
           <h1>Categories</h1>
-          <a href=""><button class="button-Cloth" role="button">Cloths</button></a>
-          <a href=""><button class="button-Cloth" role="button">Makeup</button></a>
-          <a href=""><button class="button-Cloth" role="button">Shoes</button></a>
-          <a href=""><button class="button-Cloth" role="button">Skin</button></a>
-          <a href=""><button class="button-Cloth" role="button">Hair</button></a>
+          <a href="#Cloth"><button class="button-Cloth" role="button">Cloths</button></a>
+          <a href="#Makeup"><button class="button-Cloth" role="button">Makeup</button></a>
+          <a href="#Shoes"><button class="button-Cloth" role="button">Shoes</button></a>
+          <a href="#Skin"><button class="button-Cloth" role="button">Skin</button></a>
+          <a href="#Hair"><button class="button-Cloth" role="button">Hair</button></a>
       </div>
       <section>
-          <div class="heading">
-              <h1>Cloths</h1>
-          </div>
-          <div class="card-container">
-            <div class="card-product">
-              <a href="">
-                <img src="{% static 'img/home/img1.jpg' %}" alt="Product 1">
-              </a>
-              <div class="card-content">
-                <h2>Dress</h2>
-                <p>Rs. 1,999.00</p>
-              </div>
-            </div>
+        <div class="heading" id="Cloth">
+            <h1>Cloth</h1>
         </div>
-        <button id="load-more-btn">Load More</button>
+        <div class="card-container">
+          {% for product in product %}
+        {% if product.category == "Cloth" %}
+          <div class="card-product" data-category="Cloth">
+              <img src="{{product.image}}" alt="{{product.product_name}}">
+            <div class="card-content">
+              <h2>{{product.product_name}}</h2>
+              <p>Rs. {{product.price}}</p>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+        <button class="load-more-btn" data-category="Cloth">Load More</button>
+        <div class="heading" id="Makeup">
+            <h1>Makeup</h1>
+        </div>
+        <div class="card-container">
+          {% for product in product %}
+        {% if product.category == "Makeup" %}
+          <div class="card-product" data-category="Makeup">
+              <img src="{{product.image}}" alt="{{product.product_name}}">
+            <div class="card-content">
+              <h2>{{product.product_name}}</h2>
+              <p>Rs. {{product.price}}</p>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+        <button class="load-more-btn" data-category="Makeup">Load More</button>
+        <div class="heading" id="Shoes">
+            <h1>Shoes</h1>
+        </div>
+        <div class="card-container">
+          {% for product in product %}
+        {% if product.category == "Shoes" %}
+          <div class="card-product" data-category="Shoes">
+              <img src="{{product.image}}" alt="{{product.product_name}}">
+            <div class="card-content">
+              <h2>{{product.product_name}}</h2>
+              <p>Rs. {{product.price}}</p>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+        <button class="load-more-btn" data-category="Shoes">Load More</button>
+        <div class="heading" id="Skin">
+            <h1>Skin</h1>
+        </div>
+        <div class="card-container">
+          {% for product in product %}
+        {% if product.category == "Skin" %}
+          <div class="card-product" data-category="Skin">
+              <img src="{{product.image}}" alt="{{product.product_name}}">
+            <div class="card-content">
+              <h2>{{product.product_name}}</h2>
+              <p>Rs. {{product.price}}</p>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+        <button class="load-more-btn" data-category="Skin">Load More</button>
+        <div class="heading" id="Hair">
+            <h1>Hair</h1>
+        </div>
+        <div class="card-container">
+          {% for product in product %}
+        {% if product.category == "Hair" %}
+          <div class="card-product" data-category="Hair">
+              <img src="{{product.image}}" alt="{{product.product_name}}">
+            <div class="card-content">
+              <h2>{{product.product_name}}</h2>
+              <p>Rs. {{product.price}}</p>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+        <button class="load-more-btn" data-category="Hair">Load More</button>
         </section>
     </div>
       {% include "footer.html" %}

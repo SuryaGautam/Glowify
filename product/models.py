@@ -4,4 +4,9 @@ class Product(models.Model):
     product_img=models.TextField()
     product_name=models.CharField(max_length=50)
     product_price=models.DecimalField(max_digits=10, decimal_places=2)
+
+class newProduct(models.Model):
+    newproduct_img=models.TextField()
+    newproduct_name=models.CharField(max_length=50)
+    newproduct_price=models.DecimalField(max_digits=10, decimal_places=2)
 # Create your models here.
