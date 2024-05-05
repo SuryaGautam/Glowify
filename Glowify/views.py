@@ -41,20 +41,14 @@ def contact_page(request):
             elif request.POST["phonenumber"] == "":
                 return render(request,'contact.html',{"error":True,"name":"Phone Number"})
             else:
-                return render(request,'contact.html')    
+                name=request.POST["name"]
+                email=request.POST["email"]
+                phonenumber=request.POST["phonenumber"]
+                message=request.POST["message"]
+                data=ContactEnquiry(name=name,email=email,phone_number=phonenumber,message=message)
+                data.save()
+                return render(request,"thankyou.html")    
     except:
         pass
 
     return render(request,'contact.html')
-
-def save_enquiry(request):
-    if request.method == "POST":
-        name=request.POST["name"]
-        email=request.POST["email"]
-        phonenumber=request.POST["phonenumber"]
-        message=request.POST["message"]
-        data=ContactEnquiry(name=name,email=email,phone_number=phonenumber,message=message)
-        data.save()
-    return render(request,"thankyou.html")
-    
-

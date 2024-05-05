@@ -16,7 +16,7 @@
     <div class="contact-container">
         <div class="contact-form">
           <h2>Contact Us</h2>
-          <form method="POST" action="{% url "thankyou" %}">
+          <form method="POST">
               {% csrf_token %}
               {% if error %}
               <div class="alert alert-warning alert-dismissible fade show" role="alert">
